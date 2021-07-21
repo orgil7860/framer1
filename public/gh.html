@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(lightblue,pink);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+
+        }
+        .agu{
+            width:400px;
+            height: 200px;
+            background-color:aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            flex-direction: column;
+
+        }
+        #ner{
+            width:200px;
+            height: 70px;
+            background-color:white;
+            border-radius: 50px;
+            font-size:30px;
+            border:1px black solid;
+
+        }
+        #butto{
+            background-color:white;
+            border:1px black solid;
+            margin-top: 10px;
+            width:100px;
+            height:50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="agu">
+            <input value="" type="text" id="ner"/>
+            <button id="butto" onclick="go()">GO</button>
+            
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script>
+    let firebaseConfig = {
+    apiKey: "AIzaSyChMdCl8M_EKzo0cNbmSO7OlpQqIEVXX2k",
+    authDomain: "msss-bc9b1.firebaseapp.com",
+    projectId: "msss-bc9b1",
+    storageBucket: "msss-bc9b1.appspot.com",
+    messagingSenderId: "503464479518",
+    appId: "1:503464479518:web:de39b0b198966d8f19d70f",
+    measurementId: "G-4DRW3CFR0S",
+  }
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+    let inp = document.getElementById("ner");
+    const go = async () => {
+       await db.collection('users').add({
+            name: inp.value,
+            time: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        location.href="./g.html";
+    }
+
+    
+
+</script>
+</html>

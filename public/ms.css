@@ -1,0 +1,55 @@
+.big{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    background-color:black ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+}
+
+
+.container{
+    background: linear-gradient(lightblue,pink);
+    width:800px;
+    height: 700px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 50px;
+    flex-direction: column;
+}
+#mss{
+    width: 500px;
+    height: 60px;
+    background-color:white;
+    border: 0;
+    border-radius: 50px;
+    font-size: 30px;
+    
+}
+.hea{
+    font-size: 100px;
+    color: white;
+    font-style: italic;
+    margin-bottom: 0;
+}
+.oroh{
+
+}
+.send{
+    background-color:white;
+    border:1px black solid;
+    border-radius: 20px;
+    width:100px;
+    height: 60px;
+    margin-left: 150px;
+
+
+}
+#or{
+    width:800px;
+    height: 100vh;
+    font-size: 50px;
+
+}
